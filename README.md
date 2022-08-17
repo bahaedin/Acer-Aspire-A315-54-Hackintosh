@@ -69,7 +69,7 @@ This OpenCore configuration is optimized for my specific hardware, so please rea
 - [ ] CFG Lock (MSR_E2): **Disabled** 
   - (if you cannot find this option then set `AppleXcpmCfgLock` to `true` under `Kernel` -> `Quirks` in config.plist)
 - [x] DVMT Pre-Allocated Memory: 64MB
-  - (If you cannot find this option and/or you are not sure if you pre-allocated memory is >= 64MB then you should patch your VRAM (see the details below)
+  - (If you cannot find this option and/or you are not sure if you pre-allocated memory is >= 64MB then you should patch your VRAM ([see the details below](https://github.com/bahaedin/Acer-Aspire-A315-54-Hackintosh/edit/main/README.md#vram-patching))
 - [x] SATA MODE: **AHCI**
   - Launch BIOS by tapping the `F2` key repeatedly right after booting.
   - When in BIOS, go to `Advanced` and type `CTRL` + `S`  it will display a (Hidden) option change it from **Optain** to **AHCI**
@@ -85,13 +85,13 @@ Refer to [Dortania Guide](https://dortania.github.io/OpenCore-Install-Guide/ktex
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |**SSDT-PLUG**	   |***Crucial*** 		 																																	   								   |
 |**SSDT-PNLF**	   |Fixes backlight.				 																																						   |
-|**SSDT-XOSI**     |Enable GPI0 for fixing I2C trackpad [see](https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad.html) and **add patches below**. 																																					   |
+|**SSDT-XOSI**     |Enable GPI0 for fixing I2C trackpad [see](https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad.html) and [**add patches below**](https://github.com/bahaedin/Acer-Aspire-A315-54-Hackintosh/edit/main/README.md#ssdt-xosi). 																																					   |
 |**SSDT-ALS0**     |Provides macOS with a fake Ambient Light Sensor device (ALS), so it could store the current brightness level and keep it after reboots.		 		 									   |
 |**SSDT-DMAC**     |Provides macOS with a fake Direct Memory Access Controller (DMAC), because the device is present in any Intel-based Mac. The necessity for this SSDT is unknown, consider it as "cosmetic".|
 |**SSDT-EC-USBX**  |***Crucial***	 																																			   							   |
 |**SSDT-SBUS-MCHC**|Fixes AppleSMBus support in macOS [see](https://dortania.github.io/Getting-Started-With-ACPI/Universal/smbus.html).				 		 																																   |
 |**SSDT-MEM2** 	   |Makes the iGPU use MEM2 instead of TMPX, so the IOAccelMemoryInfoUserClient is loaded correctly.			 		 																	   |
-|**SSDT-GPRW**     |Fixes instant wake on USB/power state change [see](https://dortania.github.io/OpenCore-Post-Install/usb/misc/instant-wake.html) and **add patches below**.																																			   |
+|**SSDT-GPRW**     |Fixes instant wake on USB/power state change [see](https://dortania.github.io/OpenCore-Post-Install/usb/misc/instant-wake.html) and [**add patches below**](https://github.com/bahaedin/Acer-Aspire-A315-54-Hackintosh/edit/main/README.md#ssdt-gprw).																																			   |
 |**SSDT-AWAC**     |Re-enable the old RTC clock that is compatible with macOS [see](https://dortania.github.io/Getting-Started-With-ACPI/Universal/awac.html).																																			   |
   
 <details>
@@ -240,6 +240,8 @@ Note that the final HEX/Data value should be 4 bytes in total (ie. `56 00 00 00`
 <br>
   
 PlatformInfo section of the config.plist is left empty for security reasons. You need to generate your own SMBIOS data and change the corresponding values (`MLB`, `ROM`, `SystemSerialNumber`, `SystemUUID`) under PlatformInfo in config.plist. Luckily, [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) can take care of that for you.
+
+Check This [guide](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#using-gensmbios) for better understanding..
   
 </details>
 
@@ -283,5 +285,7 @@ I prefer skipping the boot picker and going straight to macOS, but if you wish t
 [**Dortania**](https://dortania.github.io/OpenCore-Install-Guide/) for the great guides.
 
 [**Acidanthera**](https://github.com/acidanthera) for awesome kexts and first-class support for hackintosh enthusiasts.
+
+[**ic005k**](https://github.com/ic005k/OCAuxiliaryTools) for his awesome tool **OCAuxiliaryTools**
 
 [**Alexandre Daoud**](https://github.com/alexandred) for VoodooI2C kext and making it work with the trackpad.
