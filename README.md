@@ -69,7 +69,7 @@ This OpenCore configuration is optimized for my specific hardware, so please rea
 - [ ] CFG Lock (MSR_E2): **Disabled** 
   - (if you cannot find this option then set `AppleXcpmCfgLock` to `true` under `Kernel` -> `Quirks` in config.plist)
 - [x] DVMT Pre-Allocated Memory: 64MB
-  - (If you cannot find this option and/or you are not sure if you pre-allocated memory is >= 64MB then you should patch your VRAM ([see the details below](https://github.com/bahaedin/Acer-Aspire-A315-54-Hackintosh/edit/main/README.md#vram-patching))
+  - (If you cannot find this option and/or you are not sure if you pre-allocated memory is >= 64MB then you should patch your VRAM ([see the details below](https://github.com/bahaedin/Acer-Aspire-A315-54-Hackintosh#vram-patching))
 - [x] SATA MODE: **AHCI**
   - Launch BIOS by tapping the `F2` key repeatedly right after booting.
   - When in BIOS, go to `Advanced` and type `CTRL` + `S`  it will display a (Hidden) option change it from **Optain** to **AHCI**
@@ -85,13 +85,13 @@ Refer to [Dortania Guide](https://dortania.github.io/OpenCore-Install-Guide/ktex
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |**SSDT-PLUG**	   |***Crucial*** 		 																																	   								   |
 |**SSDT-PNLF**	   |Fixes backlight.				 																																						   |
-|**SSDT-XOSI**     |Enable GPI0 for fixing I2C trackpad [see](https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad.html) and [**add patches below**](https://github.com/bahaedin/Acer-Aspire-A315-54-Hackintosh/edit/main/README.md#ssdt-xosi). 																																					   |
+|**SSDT-XOSI**     |Enable GPI0 for fixing I2C trackpad [see](https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad.html) and [**add patches below**](https://github.com/bahaedin/Acer-Aspire-A315-54-Hackintosh#ssdt-xosi). 																																					   |
 |**SSDT-ALS0**     |Provides macOS with a fake Ambient Light Sensor device (ALS), so it could store the current brightness level and keep it after reboots.		 		 									   |
 |**SSDT-DMAC**     |Provides macOS with a fake Direct Memory Access Controller (DMAC), because the device is present in any Intel-based Mac. The necessity for this SSDT is unknown, consider it as "cosmetic".|
 |**SSDT-EC-USBX**  |***Crucial***	 																																			   							   |
 |**SSDT-SBUS-MCHC**|Fixes AppleSMBus support in macOS [see](https://dortania.github.io/Getting-Started-With-ACPI/Universal/smbus.html).				 		 																																   |
 |**SSDT-MEM2** 	   |Makes the iGPU use MEM2 instead of TMPX, so the IOAccelMemoryInfoUserClient is loaded correctly.			 		 																	   |
-|**SSDT-GPRW**     |Fixes instant wake on USB/power state change [see](https://dortania.github.io/OpenCore-Post-Install/usb/misc/instant-wake.html) and [**add patches below**](https://github.com/bahaedin/Acer-Aspire-A315-54-Hackintosh/edit/main/README.md#ssdt-gprw).																																			   |
+|**SSDT-GPRW**     |Fixes instant wake on USB/power state change [see](https://dortania.github.io/OpenCore-Post-Install/usb/misc/instant-wake.html) and [**add patches below**](https://github.com/bahaedin/Acer-Aspire-A315-54-Hackintosh#ssdt-gprw).																																			   |
 |**SSDT-AWAC**     |Re-enable the old RTC clock that is compatible with macOS [see](https://dortania.github.io/Getting-Started-With-ACPI/Universal/awac.html).																																			   |
   
 <details>
