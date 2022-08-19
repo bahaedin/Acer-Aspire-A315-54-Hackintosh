@@ -2,7 +2,7 @@
 
 [![Status](https://img.shields.io/badge/Status-Maintained-blue.svg)](https://github.com/bahaedin/Acer-Aspire-A315-54-Hackintosh)
 [![OpenCore](https://img.shields.io/badge/OpenCore-0.8.3-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
-[![macOS](https://img.shields.io/badge/macOS-12.5-brightgreen.svg)](https://www.apple.com/macos/monterey)
+[![macOS](https://img.shields.io/badge/macOS-12.5.1-brightgreen.svg)](https://www.apple.com/macos/monterey)
 
 :warning: **WARNING:**
 This OpenCore configuration is optimized for my specific hardware, so please read carefully before doing anything or use it only as a reference. I suggest you to refer to [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) for anything else. 
