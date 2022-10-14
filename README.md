@@ -1,8 +1,8 @@
 # Acer Aspire A315-54 Hackintosh 
 
 [![Status](https://img.shields.io/badge/Status-Maintained-blue.svg)](https://github.com/bahaedin/Acer-Aspire-A315-54-Hackintosh)
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.3-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
-[![macOS](https://img.shields.io/badge/macOS-12.5.1-brightgreen.svg)](https://www.apple.com/macos/monterey)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.5-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![macOS](https://img.shields.io/badge/macOS-12.6-brightgreen.svg)](https://www.apple.com/macos/monterey)
 
 :warning: **WARNING:**
 This OpenCore configuration is optimized for my specific hardware, so please read carefully before doing anything or use it only as a reference. I suggest you to refer to [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) for anything else. 
@@ -83,14 +83,13 @@ Refer to [Dortania Guide](https://dortania.github.io/OpenCore-Install-Guide/ktex
 
 |**SSDT**          |**Description**                 			 																																			   |
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|**SSDT-PLUG**	   |***Crucial*** 		 																																	   								   |
+|**SSDT-PLUG**	   |***Disabled*** is not required on macOS 12.3 and up [see](https://www.insanelymac.com/forum/topic/351675-macos-12-monterey-x86platformplugin-without-plugin-type1/). 		 																																	   								   |
 |**SSDT-PNLF**	   |Fixes backlight.				 																																						   |
 |**SSDT-XOSI**     |Enable GPI0 for fixing I2C trackpad [see](https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad.html) and **add patches below**. 																																					   |
 |**SSDT-ALS0**     |Provides macOS with a fake Ambient Light Sensor device (ALS), so it could store the current brightness level and keep it after reboots.		 		 									   |
 |**SSDT-DMAC**     |Provides macOS with a fake Direct Memory Access Controller (DMAC), because the device is present in any Intel-based Mac. The necessity for this SSDT is unknown, consider it as "cosmetic".|
 |**SSDT-EC-USBX**  |***Crucial***	 																																			   							   |
 |**SSDT-SBUS-MCHC**|Fixes AppleSMBus support in macOS [see](https://dortania.github.io/Getting-Started-With-ACPI/Universal/smbus.html).				 		 																																   |
-|**SSDT-MEM2** 	   |Makes the iGPU use MEM2 instead of TMPX, so the IOAccelMemoryInfoUserClient is loaded correctly.			 		 																	   |
 |**SSDT-GPRW**     |Fixes instant wake on USB/power state change [see](https://dortania.github.io/OpenCore-Post-Install/usb/misc/instant-wake.html) and **add patches below**.																																			   |
 |**SSDT-AWAC**     |Re-enable the old RTC clock that is compatible with macOS [see](https://dortania.github.io/Getting-Started-With-ACPI/Universal/awac.html).																																			   |
   
