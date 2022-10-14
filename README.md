@@ -27,7 +27,7 @@ This OpenCore configuration is optimized for my specific hardware, so please rea
 * **Touchpad:** Synaptic I2C (SYNA7DB5)
 * **Display:** 15.6" 1920x1080 IPS
 * **BIOS revision:** insyde V1.11
-* **Bootloader :** OC 0.8.3
+* **Bootloader :** OC 0.8.5
 
 ### What Works:
 
