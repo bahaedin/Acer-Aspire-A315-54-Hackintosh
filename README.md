@@ -288,3 +288,16 @@ I prefer skipping the boot picker and going straight to macOS, but if you wish t
 [**ic005k**](https://github.com/ic005k/OCAuxiliaryTools) for his awesome tool **OCAuxiliaryTools**
 
 [**Alexandre Daoud**](https://github.com/alexandred) for VoodooI2C kext and making it work with the trackpad.
+
+## Contact
+
+- [Facebook](https://facebook.com/b.wdgt)
+- [Youtube](https://youtube.com/c/Bahaewadgattait)
+- [Telegram](https://t.me/b_wdgt)
+- [Reddit](https://reddit.com/user/wadgattait)
+
+## Donate
+
+If you like my work, you can buy me a coffee
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/b.wdgt)
