@@ -48,6 +48,7 @@ This OpenCore configuration is optimized for my specific hardware, so please rea
 - [x] AirDrop (Two Ways)
 - [x] iMessage
 - [x] FaceTime
+- [x] AirPlay
 
 ### Not Working:
 
@@ -56,7 +57,6 @@ This OpenCore configuration is optimized for my specific hardware, so please rea
 ### Not Tested:
 - [ ] Handoff
 - [ ] Continuity
-- [ ] AirPlay
 
 ### :information_source: **NOTE:** Do This Before installing macOS
 
@@ -76,7 +76,7 @@ This OpenCore configuration is optimized for my specific hardware, so please rea
   
 ## Config.plist:
 <details>
-<summary><h3>SSDTs</h3></summary>
+<summary><h3>SSDTs:</h3></summary>
 <br>
   
 Refer to [Dortania Guide](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#laptop) i will only describe the SSDTs that are not essential for functioning but are present in my EFI.
@@ -94,7 +94,7 @@ Refer to [Dortania Guide](https://dortania.github.io/OpenCore-Install-Guide/ktex
 |**SSDT-AWAC**     |Re-enable the old RTC clock that is compatible with macOS [see](https://dortania.github.io/Getting-Started-With-ACPI/Universal/awac.html).																																			   |
   
 <details>
-<summary><h3>Patches</h3></summary>
+<summary><h3>Patches:</h3></summary>
 <br>
   
 :information_source: **NOTE:** Add this patches to `ACPI` -> `Patch`
@@ -131,7 +131,7 @@ Refer to [Dortania Guide](https://dortania.github.io/OpenCore-Install-Guide/ktex
 </details>
 </details>
 <details>
-<summary><h3>DeviceProperties</h3></summary>
+<summary><h3>DeviceProperties:</h3></summary>
 <br>
 
 <details>
@@ -231,6 +231,18 @@ Note that the final HEX/Data value should be 4 bytes in total (ie. `56 00 00 00`
 |`swd_panic=1`|Avoids issue where going to sleep results in a reboot, this should instead give us a kernel panic log.	  |
 |`igfxfw=2`| boot argument to force loading of Apple GuC firmware (improves IGPU performance).	  |
 |`igfxrpsc=1`|boot argument to enable RPS control patch (improves IGPU performance).	  |
+
+</details>
+
+<details>
+<summary><h3>NVRAM:</h3></summary>
+<br>
+  
+Add new option to change the CPU name in **About This Mac** by leveraging functionality in [RestrictEvents.kext](https://github.com/acidanthera/RestrictEvents)
+  
+![CPU Name](/Screenshots/CPU%20Name.png "CPU Name")
+  
+Your are free to change the value of `revcpuname` under `NVRAM` -> `4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102` as you want.
 
 </details>
 
