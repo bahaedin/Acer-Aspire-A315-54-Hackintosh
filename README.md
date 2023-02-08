@@ -2,8 +2,8 @@
 
 [![Status](https://img.shields.io/badge/Status-Maintained-blue.svg)](https://github.com/bahaedin/Acer-Aspire-A315-54-Hackintosh)
 [![OpenCore](https://img.shields.io/badge/OpenCore-0.8.8-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
-[![macOS](https://img.shields.io/badge/macOS-12.6.1-brightgreen.svg)](https://www.apple.com/macos/monterey)
-[![GitHub all releases](https://img.shields.io/github/downloads/bahaedin/Acer-Aspire-A315-54-Hackintosh/total.svg)](https://github.com/bahaedin/Acer-Aspire-A315-54-Hackintosh/releases/)
+[![macOS](https://img.shields.io/badge/macOS-12.6.2-brightgreen.svg)](https://www.apple.com/macos/monterey)
+[![GitHub all releases](https://img.shields.io/github/downloads/bahaedin/Acer-Aspire-A315-54-Hackintosh/total?label=Downloads)](https://github.com/bahaedin/Acer-Aspire-A315-54-Hackintosh/releases)
 
 :warning: **WARNING:**
 This OpenCore configuration is optimized for my specific hardware, so please read carefully before doing anything or use it only as a reference. I suggest you to refer to [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) for anything else. 
