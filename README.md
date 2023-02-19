@@ -286,6 +286,10 @@ I prefer skipping the boot picker and going straight to macOS, but if you wish t
 
 ![Power info](/Screenshots/Power%20info.png "Power info")
 
+## Review & Benchmark:
+
+[![Youtube Review & Benchmark](/Screenshots/youtube.png "Review")](https://www.youtube.com/watch?v=_YpJkEgrhsQ)
+
 ## Credits
 
 [**Acer**](http://acer.com) for the laptop.
